@@ -96,6 +96,19 @@ namespace RegexDemo
                 Console.WriteLine("\t invalid Passwrd");
             }
         }
+        public void CheckPasswrd2()
+        {
+            string passwrd = Console.ReadLine();
+            string passwrdPattern = "^(?=.*[A-Z])(?=.*[0-9])[0-9a-zA-Z]{8,}$";//Pattern for checking the Passwed Should have at Least 1 Numric Number
+            if (Regex.IsMatch(passwrd, passwrdPattern))
+            {
+                Console.WriteLine("\t Passwrd is Valid");
+            }
+            else
+            {
+                Console.WriteLine("\t invalid Passwrd");
+            }
+        }
     }
 }
 

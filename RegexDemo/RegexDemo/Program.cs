@@ -9,7 +9,7 @@ namespace RegexDemo
             Console.WriteLine("Welcome to User Registation Problems");
             Pattern program = new Pattern();
             Console.WriteLine("-->Select to Program is Executed<--");
-            Console.WriteLine("1.Enter First Name \n2.Enter Last Name \n3.Enter Your Email ID \n4.Enter Your Mobile Number \n5.Enter PassWrd Rule1 \n6.Enter PassWrd Atleast One Upper Case \n7.Exit");
+            Console.WriteLine("1.Enter First Name \n2.Enter Last Name \n3.Enter Your Email ID \n4.Enter Your Mobile Number \n5.Enter PassWrd Rule1 \n6.Enter PassWrd Atleast One Upper Case \n7.Enter PassWrd Atleast One Numeric Number \n8.Exit");
             Console.WriteLine("Select Valid Option:->");
             int option = Convert.ToInt32(Console.ReadLine());
             bool flag = true;
@@ -46,7 +46,12 @@ namespace RegexDemo
                         Console.WriteLine("\tEnter Your Passwrd: ");
                         program.CheckPasswrd1(); //Call the Method.
                         break;
-                    case7:
+                    case 7:
+                        //Passwed for having atleast one Numric Number
+                        Console.WriteLine("\tEnter Your Passwrd: ");
+                        program.CheckPasswrd2(); //Call the Method.
+                        break;
+                    case 8:
                         flag = false;
                         break;
                     default:
