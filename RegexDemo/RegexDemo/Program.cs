@@ -9,7 +9,7 @@ namespace RegexDemo
             Console.WriteLine("Welcome to User Registation Problems");
             Pattern program = new Pattern();
             Console.WriteLine("-->Select to Program is Executed<--");
-            Console.WriteLine("1.Enter First Name \n2.Enter Last Name \n3.Enter Your Email ID \n4.Exit");
+            Console.WriteLine("1.Enter First Name \n2.Enter Last Name \n3.Enter Your Email ID \n4.Enter Your Mobile Number \n5.Exit");
             Console.WriteLine("Select Valid Option:->");
             int option = Convert.ToInt32(Console.ReadLine());
             bool flag = true;
@@ -32,6 +32,11 @@ namespace RegexDemo
                         program.CheckEmail();//Call the Method.
                         break;
                     case 4:
+                        //Validating user entered a valid Mobile Numbers or not(UC4)
+                        Console.Write("\tEnter Your Mobile Numbers: ");
+                        program.CheckMobileNumber();//Call the Method.
+                        break;
+                    case 5:
                         flag = false;
                         break;
                     default:

@@ -55,5 +55,19 @@ namespace RegexDemo
                 Console.WriteLine("\tThe given email id is not valid");
             }
         }
+        public void CheckMobileNumber()
+        {
+            string mobileNum = Console.ReadLine();
+            //Pattern for checking the mobile number(UC4)
+            string mobNumPattern = "^91[ ][1-9][0-9]{9}$";
+            if (Regex.IsMatch(mobileNum, mobNumPattern))
+            {
+                Console.WriteLine("\tThe given mobile number is valid");
+            }
+            else
+            {
+                Console.WriteLine("\tThe number should follow 91 10 digits E.g. 91 9919819801");
+            }
+        }
     }
 }
