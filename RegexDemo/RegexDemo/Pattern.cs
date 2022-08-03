@@ -69,5 +69,19 @@ namespace RegexDemo
                 Console.WriteLine("\tThe number should follow 91 10 digits E.g. 91 9919819801");
             }
         }
+        public void CheckPasswrd()
+        {
+            string passwrd = Console.ReadLine();
+            //Pattern for checking the Passwed(UC5) Rule-1 minimum 8 Char
+            string passwrdPattern = "^[a-zA-Z]{8,}$";
+            if (Regex.IsMatch(passwrd, passwrdPattern))
+            {
+                Console.WriteLine("\t Passwrd is Valid");
+            }
+            else
+            {
+                Console.WriteLine("\t invalid Passwrd");
+            }
+        }
     }
 }
